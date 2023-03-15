@@ -1,0 +1,191 @@
+{
+  "id": 1,
+  "spId": "01",
+  "plazaId": "001",
+  "laneConfigurations": {
+    "N01": {
+      "id": 1,
+      "laneId": "N01",
+      "laneType": "Exit",
+      "laneBound": "North",
+      "rfidDeviceType": {
+        "id": 1,
+        "name": "hybrid"
+      }
+    },
+    "001": {
+      "id": 2,
+      "laneId": "001",
+      "laneType": "Entry",
+      "laneBound": "Other",
+      "rfidDeviceType": {
+        "id": 2,
+        "name": "handheld"
+      }
+    }
+  },
+  "monitoringSchedules": {
+    "monday": [
+      {
+        "id": 1,
+        "day": "monday",
+        "startTime": 8,
+        "endTime": 10,
+        "escalationPlans": [
+          {
+            "id": 2,
+            "level": 2,
+            "threshold": 20,
+            "dingTalkContacts": [
+              {
+                "id": 3,
+                "type": "personal",
+                "name": "c"
+              }
+            ],
+            "rfidEvent": {
+              "id": 1,
+              "type": "notification",
+              "messageTemplate": "xxxx"
+            }
+          },
+          {
+            "id": 3,
+            "level": 3,
+            "threshold": 30,
+            "dingTalkContacts": [
+              {
+                "id": 4,
+                "type": "group",
+                "name": "x"
+              }
+            ],
+            "rfidEvent": {
+              "id": 2,
+              "type": "notification",
+              "messageTemplate": "yyyy"
+            }
+          },
+          {
+            "id": 1,
+            "level": 1,
+            "threshold": 10,
+            "dingTalkContacts": [
+              {
+                "id": 1,
+                "type": "personal",
+                "name": "a"
+              },
+              {
+                "id": 2,
+                "type": "personal",
+                "name": "b"
+              }
+            ],
+            "rfidEvent": {
+              "id": 1,
+              "type": "notification",
+              "messageTemplate": "xxxx"
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "day": "monday",
+        "startTime": 17,
+        "endTime": 19,
+        "escalationPlans": [
+          {
+            "id": 2,
+            "level": 2,
+            "threshold": 20,
+            "dingTalkContacts": [
+              {
+                "id": 3,
+                "type": "personal",
+                "name": "c"
+              }
+            ],
+            "rfidEvent": {
+              "id": 1,
+              "type": "notification",
+              "messageTemplate": "xxxx"
+            }
+          },
+          {
+            "id": 1,
+            "level": 1,
+            "threshold": 10,
+            "dingTalkContacts": [
+              {
+                "id": 1,
+                "type": "personal",
+                "name": "a"
+              },
+              {
+                "id": 2,
+                "type": "personal",
+                "name": "b"
+              }
+            ],
+            "rfidEvent": {
+              "id": 1,
+              "type": "notification",
+              "messageTemplate": "xxxx"
+            }
+          }
+        ]
+      }
+    ],
+    "wednesday": [
+      {
+        "id": 3,
+        "day": "wednesday",
+        "startTime": 8,
+        "endTime": 10,
+        "escalationPlans": [
+          {
+            "id": 2,
+            "level": 2,
+            "threshold": 20,
+            "dingTalkContacts": [
+              {
+                "id": 3,
+                "type": "personal",
+                "name": "c"
+              }
+            ],
+            "rfidEvent": {
+              "id": 1,
+              "type": "notification",
+              "messageTemplate": "xxxx"
+            }
+          },
+          {
+            "id": 1,
+            "level": 1,
+            "threshold": 10,
+            "dingTalkContacts": [
+              {
+                "id": 1,
+                "type": "personal",
+                "name": "a"
+              },
+              {
+                "id": 2,
+                "type": "personal",
+                "name": "b"
+              }
+            ],
+            "rfidEvent": {
+              "id": 1,
+              "type": "notification",
+              "messageTemplate": "xxxx"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
