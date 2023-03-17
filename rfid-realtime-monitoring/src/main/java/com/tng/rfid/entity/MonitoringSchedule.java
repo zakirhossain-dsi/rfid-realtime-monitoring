@@ -21,6 +21,9 @@ public class MonitoringSchedule {
     @Column(name = "end_time")
     private Integer endTime;
 
+    @Column
+    private Boolean isActive;
+
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
             name = "monitoring_schedule_escalation_plan",
