@@ -31,6 +31,4 @@ public class MonitoringSchedule {
             inverseJoinColumns = @JoinColumn(name = "escalation_plan_id"))
     private Set<EscalationPlan> escalationPlans;
 
-    // @ManyToMany(mappedBy = "monitoringSchedules")
-    // private Set<TransactionRoute> transactionRoutes;
 }
