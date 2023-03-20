@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
-@Entity(name = "lane_configuration")
+@Entity(name = "lane_config")
 public class LaneConfiguration {
 
     @Id

@@ -18,8 +18,8 @@ public class EscalationPlan {
     @Column(name = "threshold")
     private Integer threshold;
 
-    // @ManyToMany(fetch = FetchType.LAZY, mappedBy = "escalationPlans")
-    // Set<MonitoringSchedule> monitoringSchedules;
+    @Column
+    private Boolean isActive;
 
     @ManyToMany
     @JoinTable(

@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.Set;
 
 @Data
-@Entity
+@Entity(name = "suspicious_txn_config")
 public class SuspiciousTransactionConfiguration {
 
     @Id
@@ -15,7 +15,7 @@ public class SuspiciousTransactionConfiguration {
 
     @ManyToMany
     @JoinTable(
-            name = "suspicious_transaction_dingtalk_contact",
+            name = "suspicious_txn_dingtalk_contact",
             joinColumns = @JoinColumn(name = "suspicious_txn_config_id"),
             inverseJoinColumns = @JoinColumn(name = "dingtalk_contact_id"))
     Set<DingTalkContact> dingTalkContacts;

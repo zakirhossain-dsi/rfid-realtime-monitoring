@@ -2,7 +2,7 @@
   "id": 1,
   "spId": "01",
   "plazaId": "001",
-  "laneConfigurations": [
+  "laneConfigs": [
     {
       "id": 1,
       "laneId": "N01",

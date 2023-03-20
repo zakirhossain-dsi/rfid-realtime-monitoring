@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Set;
 
 @Data
-@Entity(name = "plaza_configuration")
+@Entity(name = "plaza_config")
 public class PlazaConfiguration {
 
     @Id
@@ -21,14 +21,14 @@ public class PlazaConfiguration {
     @ManyToMany
     @JoinTable(
             name = "plaza_lane",
-            joinColumns = @JoinColumn(name = "plaza_configuration_id"),
+            joinColumns = @JoinColumn(name = "plaza_config_id"),
             inverseJoinColumns = @JoinColumn(name = "lane_id"))
-    private Set<LaneConfiguration> laneConfigurations;
+    private Set<LaneConfiguration> laneConfigs;
 
     @ManyToMany
     @JoinTable(
             name = "plaza_monitoring_schedule",
-            joinColumns = @JoinColumn(name = "plaza_configuration_id"),
+            joinColumns = @JoinColumn(name = "plaza_config_id"),
             inverseJoinColumns = @JoinColumn(name = "monitoring_schedule_id"))
     private Set<MonitoringSchedule> monitoringSchedules;
 

@@ -13,7 +13,7 @@ public class DingTalkSender {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long plazaConfigurationId;
+    private Long plazaConfigId;
 
     private Long monitoringScheduleId;
 

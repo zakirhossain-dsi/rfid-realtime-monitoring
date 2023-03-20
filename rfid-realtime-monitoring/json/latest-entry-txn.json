@@ -1,0 +1,11 @@
+{
+  "transactionType": "B",
+  "etcEntryTimestamp": "2017-03-03T10:02:03.215+08:00",
+  "etcEntrySPId": "01",
+  "etcEntryPlazaId": "001",
+  "etcEntryLaneId": "N01",
+  "etcExitTimestamp": "2017-03-03T10:02:03.215+08:00",
+  "etcTagSerialNum": "30955nmnlje1dn8a9f4k3c7g26j92",
+  "serialNum": "082603W072017010112000000",
+  "bound": "North"
+}

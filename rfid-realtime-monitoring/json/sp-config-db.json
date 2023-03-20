@@ -1,0 +1,19 @@
+DB Name
+
+Table Name
+
+Column Name
+
+Column Type
+
+Column Description
+
+tng_rfid_db
+
+sp_config
+
+TRANSACTION_ALLOWABLE_MONITOR_PERIOD
+
+INTEGER
+
+The value of this column refers to the minute.

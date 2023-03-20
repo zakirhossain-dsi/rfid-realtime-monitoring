@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
-@Entity
+@Entity(name = "ignore_rfid_device_type")
 public class IgnoreRfidDeviceType {
 
     @Id
