@@ -6,7 +6,7 @@ import java.util.Set;
 
 @Data
 @Entity(name = "plaza_config")
-public class PlazaConfiguration {
+public class PlazaConfiguration extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

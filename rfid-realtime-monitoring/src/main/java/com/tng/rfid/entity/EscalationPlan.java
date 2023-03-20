@@ -7,7 +7,7 @@ import java.util.Set;
 
 @Data
 @Entity(name = "escalation_plan")
-public class EscalationPlan {
+public class EscalationPlan extends BaseEntity{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;

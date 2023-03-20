@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity(name = "dingtalk_contact")
-public class DingTalkContact {
+public class DingTalkContact extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

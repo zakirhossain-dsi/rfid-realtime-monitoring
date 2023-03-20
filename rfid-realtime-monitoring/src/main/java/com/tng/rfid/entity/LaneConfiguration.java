@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity(name = "lane_config")
-public class LaneConfiguration {
+public class LaneConfiguration extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

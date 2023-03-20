@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity(name = "ignore_rfid_device_type")
-public class IgnoreRfidDeviceType {
+public class IgnoreRfidDeviceType extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

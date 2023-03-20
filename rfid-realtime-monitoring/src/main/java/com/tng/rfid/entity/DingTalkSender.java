@@ -7,7 +7,7 @@ import java.util.Set;
 
 @Data
 @Entity(name = "dingtalk_sender")
-public class DingTalkSender {
+public class DingTalkSender extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,7 @@ public class DingTalkSender {
 
     private Long monitoringScheduleId;
 
-    @Column(nullable = false)
+    @Column
     private Long escalationPlanId;
 
     @Column(nullable = false)
@@ -30,10 +30,10 @@ public class DingTalkSender {
             inverseJoinColumns = @JoinColumn(name = "dingtalk_contact_id"))
     Set<DingTalkContact> dingTalkContacts;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 1000)
     private String message;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 20)
     private String status;
 
     @Column(nullable = false)

@@ -9,7 +9,7 @@ import org.hibernate.annotations.DynamicUpdate;
 @DynamicInsert
 @DynamicUpdate
 @Entity(name = "rfid_device_type")
-public class RfidDeviceType {
+public class RfidDeviceType extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

@@ -7,7 +7,7 @@ import java.util.Set;
 
 @Data
 @Entity(name = "suspicious_txn_config")
-public class SuspiciousTransactionConfiguration {
+public class SuspiciousTransactionConfiguration extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

@@ -7,7 +7,7 @@ import java.util.Set;
 
 @Data
 @Entity(name = "monitoring_schedule")
-public class MonitoringSchedule {
+public class MonitoringSchedule extends BaseEntity{
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;

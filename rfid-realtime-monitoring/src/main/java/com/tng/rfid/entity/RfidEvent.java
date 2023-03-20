@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @Entity(name = "rfid_event")
-public class RfidEvent {
+public class RfidEvent extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
