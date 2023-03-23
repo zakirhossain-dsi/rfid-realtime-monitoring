@@ -13,6 +13,6 @@ public class IgnoreRfidDeviceType extends BaseEntity{
 
     @OneToOne
     @JoinColumn(name = "rfid_device_type_id", nullable = false, unique = true)
-    private RfidDeviceType rfidDeviceType;
+    private DeviceConfig deviceConfig;
 
 }

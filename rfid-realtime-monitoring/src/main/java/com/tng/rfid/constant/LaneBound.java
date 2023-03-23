@@ -1,5 +1,5 @@
 package com.tng.rfid.constant;
 
-public enum Bound {
+public enum LaneBound {
     NORTH, SOUTH, EAST, WEST;
 }

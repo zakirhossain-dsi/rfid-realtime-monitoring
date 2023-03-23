@@ -8,13 +8,19 @@ import org.hibernate.annotations.DynamicUpdate;
 @Data
 @DynamicInsert
 @DynamicUpdate
-@Entity(name = "rfid_device_type")
-public class RfidDeviceType extends BaseEntity{
+@Entity(name = "device_config")
+public class DeviceConfig extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", unique = true, nullable = false)
-    private String name;
+    @Column(unique = true, nullable = false)
+    private String deviceId;
+
+    @Column(unique = true, nullable = false)
+    private String deviceName;
+
+    @Column(nullable = false)
+    private String deviceType;
 }

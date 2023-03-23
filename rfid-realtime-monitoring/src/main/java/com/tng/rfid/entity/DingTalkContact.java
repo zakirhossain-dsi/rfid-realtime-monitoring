@@ -11,9 +11,12 @@ public class DingTalkContact extends BaseEntity{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "type")
-    private String type;
-
-    @Column(name = "name")
+    @Column(nullable = false, unique = true)
     private String name;
+
+    @Column(nullable = false)
+    private String countryCode;
+
+    @Column(nullable = false)
+    private String mobileNumber;
 }

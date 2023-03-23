@@ -1,6 +1,7 @@
 {
-  "spId": {
+  "spconfig-01": {
     "id": 1,
+    "transactionAllowableMonitorPeriod": 120,
     "laneConfigs": [
       {
         "id": 1,

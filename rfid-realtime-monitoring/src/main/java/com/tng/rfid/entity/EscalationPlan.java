@@ -12,14 +12,11 @@ public class EscalationPlan extends BaseEntity{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "level")
+    @Column(nullable = false)
     private Integer level;
 
-    @Column(name = "threshold")
-    private Integer threshold;
-
     @Column
-    private Boolean isActive;
+    private Integer threshold; // Threshold will be in minute
 
     @ManyToMany
     @JoinTable(
@@ -28,7 +25,12 @@ public class EscalationPlan extends BaseEntity{
             inverseJoinColumns = @JoinColumn(name = "dingtalk_contact_id"))
     Set<DingTalkContact> dingTalkContacts;
 
-    @ManyToOne
-    @JoinColumn(name="rfid_event_id", nullable=false)
-    private RfidEvent rfidEvent;
+    @ManyToMany
+    @JoinTable(
+            name = "escalation_plan_dingtalk_group",
+            joinColumns = @JoinColumn(name = "escalation_plan_id"),
+            inverseJoinColumns = @JoinColumn(name = "dingtalk_group_id"))
+    Set<DingTalkGroup> dingTalkGroups;
+
+    private String alertMessage;
 }

@@ -13,7 +13,7 @@ public class DingTalkSender extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long plazaConfigId;
+    private Long laneConfigId;
 
     private Long monitoringScheduleId;
 

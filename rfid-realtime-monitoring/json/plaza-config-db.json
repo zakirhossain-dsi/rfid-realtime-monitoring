@@ -4,182 +4,347 @@
   "plazaId": "001",
   "laneConfigs": [
     {
+      "createDate": null,
+      "createdBy": null,
+      "lastModifiedDate": null,
+      "lastModifiedBy": null,
+      "active": null,
+      "deleted": null,
       "id": 1,
       "laneId": "N01",
-      "laneType": "Exit",
-      "laneBound": "North",
+      "laneType": "ENTRY",
+      "laneBound": "NORTH",
+      "monitoringStatus": "ACTIVE",
       "rfidDeviceType": {
+        "createDate": null,
+        "createdBy": null,
+        "lastModifiedDate": null,
+        "lastModifiedBy": null,
+        "active": null,
+        "deleted": null,
         "id": 1,
         "name": "hybrid"
-      }
-    },
-    {
-      "id": 2,
-      "laneId": "001",
-      "laneType": "Entry",
-      "laneBound": "Other",
-      "rfidDeviceType": {
-        "id": 2,
-        "name": "handheld"
-      }
-    }
-  ],
-  "monitoringSchedules": [
-    {
-      "id": 1,
-      "day": "monday",
-      "startTime": 8,
-      "endTime": 10,
-      "escalationPlans": [
+      },
+      "monitoringSchedules": [
         {
+          "createDate": null,
+          "createdBy": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "active": null,
+          "deleted": null,
           "id": 2,
-          "level": 2,
-          "threshold": 20,
-          "dingTalkContacts": [
+          "day": "MONDAY",
+          "startTime": 17,
+          "endTime": 19,
+          "escalationPlans": [
             {
-              "id": 3,
-              "type": "personal",
-              "name": "c"
+              "createDate": null,
+              "createdBy": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "active": null,
+              "deleted": null,
+              "id": 2,
+              "level": 2,
+              "threshold": 20,
+              "dingTalkContacts": [
+                {
+                  "createDate": null,
+                  "createdBy": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "active": null,
+                  "deleted": null,
+                  "id": 3,
+                  "type": "INDIVIDUAL",
+                  "name": "c"
+                }
+              ],
+              "rfidEvent": {
+                "createDate": null,
+                "createdBy": null,
+                "lastModifiedDate": null,
+                "lastModifiedBy": null,
+                "active": null,
+                "deleted": null,
+                "id": 1,
+                "type": "notification",
+                "messageTemplate": "xxxx"
+              }
+            },
+            {
+              "createDate": null,
+              "createdBy": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "active": null,
+              "deleted": null,
+              "id": 1,
+              "level": 1,
+              "threshold": 10,
+              "dingTalkContacts": [
+                {
+                  "createDate": null,
+                  "createdBy": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "active": null,
+                  "deleted": null,
+                  "id": 1,
+                  "type": "INDIVIDUAL",
+                  "name": "a"
+                },
+                {
+                  "createDate": null,
+                  "createdBy": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "active": null,
+                  "deleted": null,
+                  "id": 2,
+                  "type": "INDIVIDUAL",
+                  "name": "b"
+                }
+              ],
+              "rfidEvent": {
+                "createDate": null,
+                "createdBy": null,
+                "lastModifiedDate": null,
+                "lastModifiedBy": null,
+                "active": null,
+                "deleted": null,
+                "id": 1,
+                "type": "notification",
+                "messageTemplate": "xxxx"
+              }
             }
-          ],
-          "rfidEvent": {
-            "id": 1,
-            "type": "notification",
-            "messageTemplate": "xxxx"
-          }
+          ]
         },
         {
+          "createDate": null,
+          "createdBy": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "active": null,
+          "deleted": null,
           "id": 3,
-          "level": 3,
-          "threshold": 30,
-          "dingTalkContacts": [
+          "day": "MONDAY",
+          "startTime": 8,
+          "endTime": 10,
+          "escalationPlans": [
             {
-              "id": 4,
-              "type": "group",
-              "name": "x"
-            }
-          ],
-          "rfidEvent": {
-            "id": 2,
-            "type": "notification",
-            "messageTemplate": "yyyy"
-          }
-        },
-        {
-          "id": 1,
-          "level": 1,
-          "threshold": 10,
-          "dingTalkContacts": [
-            {
-              "id": 1,
-              "type": "personal",
-              "name": "a"
+              "createDate": null,
+              "createdBy": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "active": null,
+              "deleted": null,
+              "id": 2,
+              "level": 2,
+              "threshold": 20,
+              "dingTalkContacts": [
+                {
+                  "createDate": null,
+                  "createdBy": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "active": null,
+                  "deleted": null,
+                  "id": 3,
+                  "type": "INDIVIDUAL",
+                  "name": "c"
+                }
+              ],
+              "rfidEvent": {
+                "createDate": null,
+                "createdBy": null,
+                "lastModifiedDate": null,
+                "lastModifiedBy": null,
+                "active": null,
+                "deleted": null,
+                "id": 1,
+                "type": "notification",
+                "messageTemplate": "xxxx"
+              }
             },
             {
-              "id": 2,
-              "type": "personal",
-              "name": "b"
+              "createDate": null,
+              "createdBy": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "active": null,
+              "deleted": null,
+              "id": 1,
+              "level": 1,
+              "threshold": 10,
+              "dingTalkContacts": [
+                {
+                  "createDate": null,
+                  "createdBy": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "active": null,
+                  "deleted": null,
+                  "id": 1,
+                  "type": "INDIVIDUAL",
+                  "name": "a"
+                },
+                {
+                  "createDate": null,
+                  "createdBy": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "active": null,
+                  "deleted": null,
+                  "id": 2,
+                  "type": "INDIVIDUAL",
+                  "name": "b"
+                }
+              ],
+              "rfidEvent": {
+                "createDate": null,
+                "createdBy": null,
+                "lastModifiedDate": null,
+                "lastModifiedBy": null,
+                "active": null,
+                "deleted": null,
+                "id": 1,
+                "type": "notification",
+                "messageTemplate": "xxxx"
+              }
             }
-          ],
-          "rfidEvent": {
-            "id": 1,
-            "type": "notification",
-            "messageTemplate": "xxxx"
-          }
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "day": "monday",
-      "startTime": 17,
-      "endTime": 19,
-      "escalationPlans": [
+          ]
+        },
         {
-          "id": 2,
-          "level": 2,
-          "threshold": 20,
-          "dingTalkContacts": [
+          "createDate": null,
+          "createdBy": null,
+          "lastModifiedDate": null,
+          "lastModifiedBy": null,
+          "active": null,
+          "deleted": null,
+          "id": 1,
+          "day": "MONDAY",
+          "startTime": 8,
+          "endTime": 10,
+          "escalationPlans": [
             {
+              "createDate": null,
+              "createdBy": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "active": null,
+              "deleted": null,
+              "id": 2,
+              "level": 2,
+              "threshold": 20,
+              "dingTalkContacts": [
+                {
+                  "createDate": null,
+                  "createdBy": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "active": null,
+                  "deleted": null,
+                  "id": 3,
+                  "type": "INDIVIDUAL",
+                  "name": "c"
+                }
+              ],
+              "rfidEvent": {
+                "createDate": null,
+                "createdBy": null,
+                "lastModifiedDate": null,
+                "lastModifiedBy": null,
+                "active": null,
+                "deleted": null,
+                "id": 1,
+                "type": "notification",
+                "messageTemplate": "xxxx"
+              }
+            },
+            {
+              "createDate": null,
+              "createdBy": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "active": null,
+              "deleted": null,
+              "id": 1,
+              "level": 1,
+              "threshold": 10,
+              "dingTalkContacts": [
+                {
+                  "createDate": null,
+                  "createdBy": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "active": null,
+                  "deleted": null,
+                  "id": 1,
+                  "type": "INDIVIDUAL",
+                  "name": "a"
+                },
+                {
+                  "createDate": null,
+                  "createdBy": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "active": null,
+                  "deleted": null,
+                  "id": 2,
+                  "type": "INDIVIDUAL",
+                  "name": "b"
+                }
+              ],
+              "rfidEvent": {
+                "createDate": null,
+                "createdBy": null,
+                "lastModifiedDate": null,
+                "lastModifiedBy": null,
+                "active": null,
+                "deleted": null,
+                "id": 1,
+                "type": "notification",
+                "messageTemplate": "xxxx"
+              }
+            },
+            {
+              "createDate": null,
+              "createdBy": null,
+              "lastModifiedDate": null,
+              "lastModifiedBy": null,
+              "active": null,
+              "deleted": null,
               "id": 3,
-              "type": "personal",
-              "name": "c"
+              "level": 3,
+              "threshold": 30,
+              "dingTalkContacts": [
+                {
+                  "createDate": null,
+                  "createdBy": null,
+                  "lastModifiedDate": null,
+                  "lastModifiedBy": null,
+                  "active": null,
+                  "deleted": null,
+                  "id": 4,
+                  "type": "GROUP",
+                  "name": "x"
+                }
+              ],
+              "rfidEvent": {
+                "createDate": null,
+                "createdBy": null,
+                "lastModifiedDate": null,
+                "lastModifiedBy": null,
+                "active": null,
+                "deleted": null,
+                "id": 2,
+                "type": "notification",
+                "messageTemplate": "yyyy"
+              }
             }
-          ],
-          "rfidEvent": {
-            "id": 1,
-            "type": "notification",
-            "messageTemplate": "xxxx"
-          }
-        },
-        {
-          "id": 1,
-          "level": 1,
-          "threshold": 10,
-          "dingTalkContacts": [
-            {
-              "id": 1,
-              "type": "personal",
-              "name": "a"
-            },
-            {
-              "id": 2,
-              "type": "personal",
-              "name": "b"
-            }
-          ],
-          "rfidEvent": {
-            "id": 1,
-            "type": "notification",
-            "messageTemplate": "xxxx"
-          }
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "day": "wednesday",
-      "startTime": 8,
-      "endTime": 10,
-      "escalationPlans": [
-        {
-          "id": 2,
-          "level": 2,
-          "threshold": 20,
-          "dingTalkContacts": [
-            {
-              "id": 3,
-              "type": "personal",
-              "name": "c"
-            }
-          ],
-          "rfidEvent": {
-            "id": 1,
-            "type": "notification",
-            "messageTemplate": "xxxx"
-          }
-        },
-        {
-          "id": 1,
-          "level": 1,
-          "threshold": 10,
-          "dingTalkContacts": [
-            {
-              "id": 1,
-              "type": "personal",
-              "name": "a"
-            },
-            {
-              "id": 2,
-              "type": "personal",
-              "name": "b"
-            }
-          ],
-          "rfidEvent": {
-            "id": 1,
-            "type": "notification",
-            "messageTemplate": "xxxx"
-          }
+          ]
         }
       ]
     }

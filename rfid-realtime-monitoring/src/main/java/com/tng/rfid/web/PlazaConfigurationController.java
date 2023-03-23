@@ -1,6 +1,6 @@
 package com.tng.rfid.web;
 
-import com.tng.rfid.entity.PlazaConfiguration;
+import com.tng.rfid.entity.SPConfiguration;
 import com.tng.rfid.repository.PlazaConfigurationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,31 +17,31 @@ public class PlazaConfigurationController {
     private PlazaConfigurationRepository plazaConfigurationRepository;
 
     @PostMapping(path="")
-    public @ResponseBody List<PlazaConfiguration> addNewPlazaConfigurations(@RequestBody List<PlazaConfiguration> plazaConfigurations) {
-        List<PlazaConfiguration> result = new ArrayList<>();
-        plazaConfigurationRepository.saveAll(plazaConfigurations)
+    public @ResponseBody List<SPConfiguration> addNewPlazaConfigurations(@RequestBody List<SPConfiguration> SPConfigurations) {
+        List<SPConfiguration> result = new ArrayList<>();
+        plazaConfigurationRepository.saveAll(SPConfigurations)
                 .forEach(result::add);
         return result;
     }
 
     @PutMapping(path="")
-    public @ResponseBody List<PlazaConfiguration> updatePlazaConfigurations (@RequestBody List<PlazaConfiguration> plazaConfigurations) {
-        List<PlazaConfiguration> result = new ArrayList<>();
-        plazaConfigurationRepository.saveAll(plazaConfigurations)
+    public @ResponseBody List<SPConfiguration> updatePlazaConfigurations (@RequestBody List<SPConfiguration> SPConfigurations) {
+        List<SPConfiguration> result = new ArrayList<>();
+        plazaConfigurationRepository.saveAll(SPConfigurations)
                 .forEach(result::add);
         return result;
     }
 
     @GetMapping(path="")
-    public @ResponseBody List<PlazaConfiguration> getPlazaConfigurations () {
-        List<PlazaConfiguration> result = new ArrayList<>();
+    public @ResponseBody List<SPConfiguration> getPlazaConfigurations () {
+        List<SPConfiguration> result = new ArrayList<>();
         plazaConfigurationRepository.findAll()
                 .forEach(result::add);
         return result;
     }
 
     @GetMapping(path="/{id}")
-    public @ResponseBody PlazaConfiguration getPlazaById(@PathVariable Integer id) {
+    public @ResponseBody SPConfiguration getPlazaById(@PathVariable Integer id) {
         return plazaConfigurationRepository.findById(id)
                 .orElse(null);
     }

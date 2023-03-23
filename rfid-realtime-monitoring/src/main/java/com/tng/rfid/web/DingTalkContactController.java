@@ -3,6 +3,7 @@ package com.tng.rfid.web;
 import com.tng.rfid.entity.DingTalkContact;
 import com.tng.rfid.repository.DingTalkContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationArguments;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
