@@ -3,70 +3,84 @@
     "id": 1,
     "spId": "01",
     "transactionAllowableMonitorPeriod": 120,
-    "laneConfigs": [
+    "routeConfigs": [
       {
         "id": 1,
         "spId": "01",
+        "spName": "Plus",
         "plazaId": "001",
+        "plazaName": "abc plaza",
         "laneId": "N01",
         "laneType": "ENTRY",
         "laneBound": "NORTH",
-        "monitoringStatus": "ACTIVE",
-        "rfidDeviceType": {
+        "isActiveMonitoring": true,
+        "deviceConfig": {
           "id": 1,
-          "name": "hybrid"
+          "deviceId": "001",
+          "deviceType": "RFID",
+          "deviceName": "xyz device"
         },
-        "monitoringSchedules": {
+        "alertConfigs": {
           "MONDAY": [
+            {
+              "id": 1,
+              "day": "MONDAY",
+              "startTime": 8,
+              "endTime": 10,
+              "escalationLevel": 1,
+              "threshold": 10,
+              "alertMessage": "XXX",
+              "dingTalkContacts": [
+                {
+                  "id": 1,
+                  "name": "Chang Peng",
+                  "countryCode": "+60",
+                  "mobileNumber": "0173674233"
+                }
+              ],
+              "dingTalkGroups": [
+                {
+                  "id": 1,
+                  "name": "Support",
+                  "contacts": [
+                    {
+                      "id": 2,
+                      "name": "Tang Jee",
+                      "countryCode": "+60",
+                      "mobileNumber": "0173674234"
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "id": 2,
               "day": "MONDAY",
-              "startTime": 17,
-              "endTime": 19,
-              "escalationPlans": [
-                {
-                  "id": 2,
-                  "level": 2,
-                  "threshold": 20,
-                  "dingTalkContacts": [
-                    {
-                      "createdBy": null,
-                      "lastModifiedDate": null,
-                      "lastModifiedBy": null,
-                      "active": null,
-                      "deleted": null,
-                      "id": 3,
-                      "type": "INDIVIDUAL",
-                      "name": "c"
-                    }
-                  ],
-                  "rfidEvent": {
-                    "id": 1,
-                    "type": "notification",
-                    "messageTemplate": "xxxx"
-                  }
-                },
+              "startTime": 8,
+              "endTime": 10,
+              "escalationLevel": 2,
+              "threshold": 20,
+              "alertMessage": "YYY",
+              "dingTalkContacts": [
                 {
                   "id": 1,
-                  "level": 1,
-                  "threshold": 10,
-                  "dingTalkContacts": [
-                    {
-                      "id": 1,
-                      "type": "INDIVIDUAL",
-                      "name": "a"
-                    },
+                  "name": "Chang Peng",
+                  "countryCode": "+60",
+                  "mobileNumber": "0173674233"
+                }
+              ],
+              "dingTalkGroups": [
+                {
+                  "id": 1,
+                  "name": "Support",
+                  "contacts": [
                     {
                       "id": 2,
-                      "type": "INDIVIDUAL",
-                      "name": "b"
+                      "name": "Tang Jee",
+                      "countryCode": "+60",
+                      "mobileNumber": "0173674234"
                     }
-                  ],
-                  "rfidEvent": {
-                    "id": 1,
-                    "type": "notification",
-                    "messageTemplate": "xxxx"
-                  }
+                  ]
                 }
               ]
             },
@@ -75,109 +89,29 @@
               "day": "MONDAY",
               "startTime": 8,
               "endTime": 10,
-              "escalationPlans": [
-                {
-                  "id": 2,
-                  "level": 2,
-                  "threshold": 20,
-                  "dingTalkContacts": [
-                    {
-                      "id": 3,
-                      "type": "INDIVIDUAL",
-                      "name": "c"
-                    }
-                  ],
-                  "rfidEvent": {
-                    "id": 1,
-                    "type": "notification",
-                    "messageTemplate": "xxxx"
-                  }
-                },
+              "escalationLevel": 3,
+              "threshold": 30,
+              "alertMessage": "ZZZ",
+              "dingTalkContacts": [
                 {
                   "id": 1,
-                  "level": 1,
-                  "threshold": 10,
-                  "dingTalkContacts": [
-                    {
-                      "id": 1,
-                      "type": "INDIVIDUAL",
-                      "name": "a"
-                    },
-                    {
-                      "id": 2,
-                      "type": "INDIVIDUAL",
-                      "name": "b"
-                    }
-                  ],
-                  "rfidEvent": {
-                    "id": 1,
-                    "type": "notification",
-                    "messageTemplate": "xxxx"
-                  }
+                  "name": "Chang Peng",
+                  "countryCode": "+60",
+                  "mobileNumber": "0173674233"
                 }
-              ]
-            },
-            {
-              "id": 1,
-              "day": "MONDAY",
-              "startTime": 8,
-              "endTime": 10,
-              "escalationPlans": [
-                {
-                  "id": 2,
-                  "level": 2,
-                  "threshold": 20,
-                  "dingTalkContacts": [
-                    {
-                      "id": 3,
-                      "type": "INDIVIDUAL",
-                      "name": "c"
-                    }
-                  ],
-                  "rfidEvent": {
-                    "id": 1,
-                    "type": "notification",
-                    "messageTemplate": "xxxx"
-                  }
-                },
+              ],
+              "dingTalkGroups": [
                 {
                   "id": 1,
-                  "level": 1,
-                  "threshold": 10,
-                  "dingTalkContacts": [
-                    {
-                      "id": 1,
-                      "type": "INDIVIDUAL",
-                      "name": "a"
-                    },
+                  "name": "Support",
+                  "contacts": [
                     {
                       "id": 2,
-                      "type": "INDIVIDUAL",
-                      "name": "b"
+                      "name": "Tang Jee",
+                      "countryCode": "+60",
+                      "mobileNumber": "0173674234"
                     }
-                  ],
-                  "rfidEvent": {
-                    "id": 1,
-                    "type": "notification",
-                    "messageTemplate": "xxxx"
-                  }
-                },
-                {
-                  "id": 3,
-                  "level": 3,
-                  "threshold": 30,
-                  "dingTalkContacts": [
-                    {
-                      "id": 4,
-                      "type": "GROUP",
-                      "name": "x"
-                    }
-                  ],
-                  "rfidEvent": {
-                    "id": 2,
-                    "type": "notification",
-                    "messageTemplate": "yyyy"
-                  }
+                  ]
                 }
               ]
             }

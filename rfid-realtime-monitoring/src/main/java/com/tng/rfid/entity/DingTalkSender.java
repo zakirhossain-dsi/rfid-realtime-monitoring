@@ -13,12 +13,14 @@ public class DingTalkSender extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long laneConfigId;
-
-    private Long monitoringScheduleId;
+    @Column
+    private Long routeConfigId;
 
     @Column
-    private Long escalationPlanId;
+    private Long alertConfigId;
+
+    @Column
+    private Integer escalationLeve;
 
     @Column(nullable = false)
     private Instant transactionTimeStamp;
@@ -29,6 +31,13 @@ public class DingTalkSender extends BaseEntity {
             joinColumns = @JoinColumn(name = "dingtalk_sender_id"),
             inverseJoinColumns = @JoinColumn(name = "dingtalk_contact_id"))
     Set<DingTalkContact> dingTalkContacts;
+
+    @ManyToMany
+    @JoinTable(
+            name = "dingtalk_sender_dingtalk_group",
+            joinColumns = @JoinColumn(name = "dingtalk_sender_id"),
+            inverseJoinColumns = @JoinColumn(name = "dingtalk_group_id"))
+    Set<DingTalkGroup> dingTalkGroups;
 
     @Column(nullable = false, length = 1000)
     private String message;

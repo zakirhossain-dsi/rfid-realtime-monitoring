@@ -1,6 +1,5 @@
 package com.tng.rfid.entity;
 
-import com.tng.rfid.constant.LaneType;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -30,19 +29,18 @@ public class RouteConfig extends BaseEntity{
     @Column(length = 10)
     private String laneId;
 
+    @Column(length = 10, nullable = false)
+    private String laneType;
+
     @Column(length = 20)
     private String laneBound;
 
-    @Column(length = 10, columnDefinition = "ENUM('ENTRY', 'EXIT')", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private LaneType laneType;
+    @Column(nullable = false)
+    private Boolean isActiveMonitoring;
 
     @OneToOne
     @JoinColumn(name = "device_config_id", nullable = false)
     private DeviceConfig deviceConfig;
-
-    @Column(nullable = false)
-    private Boolean isActiveMonitoring;
 
     @OneToMany(mappedBy = "routeConfig")
     private Set<AlertConfig> alertConfigs;

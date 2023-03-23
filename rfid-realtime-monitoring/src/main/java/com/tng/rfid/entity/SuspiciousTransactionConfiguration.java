@@ -20,8 +20,13 @@ public class SuspiciousTransactionConfiguration extends BaseEntity{
             inverseJoinColumns = @JoinColumn(name = "dingtalk_contact_id"))
     Set<DingTalkContact> dingTalkContacts;
 
-    @ManyToOne
-    @JoinColumn(name="rfid_event_id", nullable=false)
-    private RfidEvent rfidEvent;
+    @ManyToMany
+    @JoinTable(
+            name = "suspicious_txn_dingtalk_group",
+            joinColumns = @JoinColumn(name = "suspicious_txn_config_id"),
+            inverseJoinColumns = @JoinColumn(name = "dingtalk_group_id"))
+    Set<DingTalkContact> dingTalkGroups;
+
+    private String message;
 
 }

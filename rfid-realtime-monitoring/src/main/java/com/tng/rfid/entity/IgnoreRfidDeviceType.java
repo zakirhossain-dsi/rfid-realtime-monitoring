@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
-@Entity(name = "ignore_rfid_device_type")
+@Entity(name = "ignore_device_config")
 public class IgnoreRfidDeviceType extends BaseEntity{
 
     @Id
@@ -12,7 +12,7 @@ public class IgnoreRfidDeviceType extends BaseEntity{
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "rfid_device_type_id", nullable = false, unique = true)
+    @JoinColumn(name = "device_config_id", nullable = false, unique = true)
     private DeviceConfig deviceConfig;
 
 }
