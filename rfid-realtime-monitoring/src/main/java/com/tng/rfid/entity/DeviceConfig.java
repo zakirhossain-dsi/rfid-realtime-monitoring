@@ -23,4 +23,7 @@ public class DeviceConfig extends BaseEntity{
 
     @Column(nullable = false)
     private String deviceType;
+
+    @Column
+    private Boolean isActive;
 }

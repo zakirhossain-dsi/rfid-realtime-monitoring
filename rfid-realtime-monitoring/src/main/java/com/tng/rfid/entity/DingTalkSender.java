@@ -20,24 +20,10 @@ public class DingTalkSender extends BaseEntity {
     private Long alertConfigId;
 
     @Column
-    private Integer escalationLeve;
+    private Long escalationConfigId;
 
     @Column(nullable = false)
     private Instant transactionTimeStamp;
-
-    @ManyToMany
-    @JoinTable(
-            name = "dingtalk_sender_dingtalk_contact",
-            joinColumns = @JoinColumn(name = "dingtalk_sender_id"),
-            inverseJoinColumns = @JoinColumn(name = "dingtalk_contact_id"))
-    Set<DingTalkContact> dingTalkContacts;
-
-    @ManyToMany
-    @JoinTable(
-            name = "dingtalk_sender_dingtalk_group",
-            joinColumns = @JoinColumn(name = "dingtalk_sender_id"),
-            inverseJoinColumns = @JoinColumn(name = "dingtalk_group_id"))
-    Set<DingTalkGroup> dingTalkGroups;
 
     @Column(nullable = false, length = 1000)
     private String message;
@@ -48,4 +34,10 @@ public class DingTalkSender extends BaseEntity {
     @Column(nullable = false)
     private Instant sendTimeStamp;
 
+    @ManyToMany
+    @JoinTable(
+            name = "dingtalk_sender_contact_config",
+            joinColumns = @JoinColumn(name = "dingtalk_sender_id"),
+            inverseJoinColumns = @JoinColumn(name = "contact_config_id"))
+    Set<ContactConfig> contactConfigs;
 }

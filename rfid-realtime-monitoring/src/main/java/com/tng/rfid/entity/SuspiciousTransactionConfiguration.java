@@ -15,17 +15,10 @@ public class SuspiciousTransactionConfiguration extends BaseEntity{
 
     @ManyToMany
     @JoinTable(
-            name = "suspicious_txn_dingtalk_contact",
+            name = "suspicious_txn_contact_config",
             joinColumns = @JoinColumn(name = "suspicious_txn_config_id"),
-            inverseJoinColumns = @JoinColumn(name = "dingtalk_contact_id"))
-    Set<DingTalkContact> dingTalkContacts;
-
-    @ManyToMany
-    @JoinTable(
-            name = "suspicious_txn_dingtalk_group",
-            joinColumns = @JoinColumn(name = "suspicious_txn_config_id"),
-            inverseJoinColumns = @JoinColumn(name = "dingtalk_group_id"))
-    Set<DingTalkContact> dingTalkGroups;
+            inverseJoinColumns = @JoinColumn(name = "contact_config_id"))
+    Set<ContactConfig> contactConfigs;
 
     private String message;
 

@@ -29,11 +29,11 @@ public class RouteConfig extends BaseEntity{
     @Column(length = 10)
     private String laneId;
 
-    @Column(length = 10, nullable = false)
-    private String laneType;
-
     @Column(length = 20)
     private String laneBound;
+
+    @Column(length = 10, nullable = false)
+    private String laneType;
 
     @Column(nullable = false)
     private Boolean isActiveMonitoring;
@@ -42,7 +42,18 @@ public class RouteConfig extends BaseEntity{
     @JoinColumn(name = "device_config_id", nullable = false)
     private DeviceConfig deviceConfig;
 
-    @OneToMany(mappedBy = "routeConfig")
+    @ManyToMany
+    @JoinTable(
+            name = "route_config_alert_group",
+            joinColumns = @JoinColumn(name = "route_config_id"),
+            inverseJoinColumns = @JoinColumn(name = "alert_group_id"))
+    private Set<AlertGroup> alertGroups;
+
+    @ManyToMany
+    @JoinTable(
+            name = "route_config_alert_config",
+            joinColumns = @JoinColumn(name = "route_config_id"),
+            inverseJoinColumns = @JoinColumn(name = "alert_config_id"))
     private Set<AlertConfig> alertConfigs;
 
     @ManyToOne
