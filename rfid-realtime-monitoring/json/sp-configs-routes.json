@@ -1,0 +1,95 @@
+{
+  "sp-configs-01": {
+    "id": 1,
+    "spId": "01",
+    "transactionAllowableMonitorPeriod": 120,
+    "routeConfigs": [
+      {
+        "id": 1,
+        "spId": "01",
+        "spName": "Plus",
+        "plazaId": "001",
+        "plazaName": "abc plaza",
+        "laneId": "N01",
+        "laneType": "ENTRY",
+        "laneBound": "NORTH",
+        "isActiveMonitoring": true,
+        "deviceConfig": {
+          "id": 1,
+          "deviceId": "001",
+          "deviceType": "RFID",
+          "deviceName": "xyz device",
+          "isActive": true
+        },
+        "alertConfigs": {
+          "MONDAY": [
+            {
+              "id": 1,
+              "day": "MONDAY",
+              "startTime": 8,
+              "endTime": 10,
+              "escalationConfigs": [
+                {
+                  "id": 1,
+                  "escalationName": "First Escalation",
+                  "escalationLevel": 1,
+                  "threshold": 10,
+                  "alertMessageConfigId": 1,
+                  "contactConfigs": [1, 2]
+                },
+                {
+                  "id": 2,
+                  "escalationName": "Second Escalation",
+                  "escalationLevel": 1,
+                  "threshold": 10,
+                  "alertMessageConfigId": 1,
+                  "contactConfigs": [3, 4, 5]
+                },
+                {
+                  "id": 3,
+                  "escalationName": "Third Escalation",
+                  "escalationLevel": 1,
+                  "threshold": 10,
+                  "alertMessageConfigId": 1,
+                  "contactConfigs": [6]
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "day": "MONDAY",
+              "startTime": 16,
+              "endTime": 18,
+              "escalationConfigs": [
+                {
+                  "id": 1,
+                  "escalationName": "First Escalation",
+                  "escalationLevel": 1,
+                  "threshold": 10,
+                  "alertMessageConfigId": 1,
+                  "contactConfigs": [1, 2]
+                },
+                {
+                  "id": 2,
+                  "escalationName": "Second Escalation",
+                  "escalationLevel": 1,
+                  "threshold": 10,
+                  "alertMessageConfigId": 1,
+                  "contactConfigs": [3, 4, 5]
+                },
+                {
+                  "id": 3,
+                  "escalationName": "Third Escalation",
+                  "escalationLevel": 1,
+                  "threshold": 10,
+                  "alertMessageConfigId": 1,
+                  "contactConfigs": [6]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -25,6 +25,6 @@ public class AlertConfig extends BaseEntity{
     @JoinTable(name = "alert_config_escalation_config",
             joinColumns = @JoinColumn(name = "alert_config_id"),
             inverseJoinColumns = @JoinColumn(name = "escalation_config_id"))
-    private Set<EscalationConfig> escalationConfig;
+    private Set<EscalationConfig> escalationConfigs;
 
 }

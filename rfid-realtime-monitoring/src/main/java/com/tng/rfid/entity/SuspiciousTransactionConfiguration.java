@@ -13,13 +13,13 @@ public class SuspiciousTransactionConfiguration extends BaseEntity{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
+    @Column
+    private String alertMessage;
+
     @ManyToMany
     @JoinTable(
             name = "suspicious_txn_contact_config",
             joinColumns = @JoinColumn(name = "suspicious_txn_config_id"),
             inverseJoinColumns = @JoinColumn(name = "contact_config_id"))
     Set<ContactConfig> contactConfigs;
-
-    private String message;
-
 }

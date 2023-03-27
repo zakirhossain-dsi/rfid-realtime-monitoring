@@ -18,12 +18,12 @@ public class EscalationConfig extends BaseEntity {
     @Column(nullable = false)
     private Integer escalationLevel;
 
+    @Column(nullable = false)
+    private Integer threshold; // Threshold will be in minute
+
     @OneToOne
     @JoinColumn(name = "alert_message_config_Id", nullable = false)
     private AlertMessageConfig alertMessage;
-
-    @Column(nullable = false)
-    private Integer threshold; // Threshold will be in minute
 
     @ManyToMany
     @JoinTable(

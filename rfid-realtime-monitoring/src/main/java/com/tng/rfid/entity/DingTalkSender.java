@@ -25,8 +25,7 @@ public class DingTalkSender extends BaseEntity {
     @Column(nullable = false)
     private Instant transactionTimeStamp;
 
-    @Column(nullable = false, length = 1000)
-    private String message;
+    private String alertMessage;
 
     @Column(nullable = false, length = 20)
     private String status;
