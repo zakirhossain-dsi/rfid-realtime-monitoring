@@ -12,23 +12,5 @@ public class EscalationConfig extends BaseEntity {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
-    private String escalationName;
 
-    @Column(nullable = false)
-    private Integer escalationLevel;
-
-    @Column(nullable = false)
-    private Integer threshold; // Threshold will be in minute
-
-    @OneToOne
-    @JoinColumn(name = "alert_message_config_Id", nullable = false)
-    private AlertMessageConfig alertMessage;
-
-    @ManyToMany
-    @JoinTable(
-            name = "escalation_config_contact_config",
-            joinColumns = @JoinColumn(name = "escalation_config_id"),
-            inverseJoinColumns = @JoinColumn(name = "contact_config_id"))
-    Set<ContactConfig> contactConfigs;
 }

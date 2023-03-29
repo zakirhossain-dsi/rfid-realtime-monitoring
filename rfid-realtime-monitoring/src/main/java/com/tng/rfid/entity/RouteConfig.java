@@ -49,13 +49,6 @@ public class RouteConfig extends BaseEntity{
             inverseJoinColumns = @JoinColumn(name = "alert_group_id"))
     private Set<AlertGroup> alertGroups;
 
-    @ManyToMany
-    @JoinTable(
-            name = "route_config_alert_config",
-            joinColumns = @JoinColumn(name = "route_config_id"),
-            inverseJoinColumns = @JoinColumn(name = "alert_config_id"))
-    private Set<AlertConfig> alertConfigs;
-
     @ManyToOne
     @JoinColumn(name = "sp_config_id")
     private SPConfiguration spConfiguration;

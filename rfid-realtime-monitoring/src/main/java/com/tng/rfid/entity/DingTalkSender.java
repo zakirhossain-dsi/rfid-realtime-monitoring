@@ -20,7 +20,7 @@ public class DingTalkSender extends BaseEntity {
     private Long alertConfigId;
 
     @Column
-    private Long escalationConfigId;
+    private Integer escalationLevel;
 
     @Column(nullable = false)
     private Instant transactionTimeStamp;

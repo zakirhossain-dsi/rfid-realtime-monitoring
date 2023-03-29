@@ -1,0 +1,97 @@
+{
+  "sp-configs-01": {
+    "id": 1,
+    "spId": "01",
+    "transactionAllowableMonitorPeriod": 120,
+    "routeConfigs": [
+      {
+        "id": 1,
+        "spId": "01",
+        "spName": "Plus",
+        "plazaId": "001",
+        "plazaName": "abc plaza",
+        "laneId": "N01",
+        "laneType": "ENTRY",
+        "laneBound": "NORTH",
+        "isActiveMonitoring": true,
+        "deviceConfig": {
+          "id": 1,
+          "deviceId": "001",
+          "deviceType": "RFID",
+          "deviceName": "xyz device",
+          "isActive": true
+        },
+        "alertConfigs": {
+          "MONDAY": [
+            {
+              "id": 1,
+              "alertName": "Monday Morning First Escalation",
+              "day": "MONDAY",
+              "startTime": 8,
+              "endTime": 10,
+              "escalationLevel": 1,
+              "threshold": 10,
+              "alertMessageConfigId": 1,
+              "contactConfigs": [1, 2]
+            },
+            {
+              "id": 2,
+              "alertName": "Monday Morning Second Escalation",
+              "day": "MONDAY",
+              "startTime": 8,
+              "endTime": 10,
+              "escalationLevel": 2,
+              "threshold": 20,
+              "alertMessageConfigId": 1,
+              "contactConfigs": [3, 4, 5]
+            },
+            {
+              "id": 3,
+              "alertName": "Monday Morning Third Escalation",
+              "day": "MONDAY",
+              "startTime": 8,
+              "endTime": 10,
+              "escalationLevel": 3,
+              "threshold": 30,
+              "alertMessageConfigId": 1,
+              "contactConfigs": [6]
+            },
+            {
+              "id": 4,
+              "alertName": "MONDAY Afternoon First Escalation",
+              "day": "MONDAY",
+              "startTime": 16,
+              "endTime": 18,
+              "escalationLevel": 1,
+              "threshold": 10,
+              "alertMessageConfigId": 1,
+              "contactConfigs": [1, 2]
+            },
+            {
+              "id": 5,
+              "alertName": "Monday Afternoon Second Escalation",
+              "day": "MONDAY",
+              "startTime": 16,
+              "endTime": 18,
+              "escalationLevel": 2,
+              "threshold": 20,
+              "alertMessageConfigId": 1,
+              "contactConfigs": [3, 4, 5]
+            },
+            {
+              "id": 6,
+              "alertName": "Monday Afternoon Third Escalation",
+              "day": "MONDAY",
+              "startTime": 16,
+              "endTime": 18,
+              "escalationLevel": 3,
+              "threshold": 30,
+              "alertMessageConfigId": 1,
+              "contactConfigs": [6]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

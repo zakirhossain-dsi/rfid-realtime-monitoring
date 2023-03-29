@@ -21,10 +21,21 @@ public class AlertConfig extends BaseEntity{
     @Column(name = "end_time", nullable = false)
     private Integer endTime;
 
+    @Column(nullable = false)
+    private Integer escalationLevel;
+
+    @Column(nullable = false)
+    private Integer threshold;
+
+    @OneToOne
+    @JoinColumn(name = "alert_message_config_Id", nullable = false)
+    private AlertMessageConfig alertMessage;
+
     @ManyToMany
-    @JoinTable(name = "alert_config_escalation_config",
+    @JoinTable(
+            name = "alert_config_contact_config",
             joinColumns = @JoinColumn(name = "alert_config_id"),
-            inverseJoinColumns = @JoinColumn(name = "escalation_config_id"))
-    private Set<EscalationConfig> escalationConfigs;
+            inverseJoinColumns = @JoinColumn(name = "contact_config_id"))
+    Set<ContactConfig> contactConfigs;
 
 }
